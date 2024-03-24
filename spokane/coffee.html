@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shops of Spokane</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-visit-16.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <body>
+    <nav id="mainNavbar" class="navbar navbar-expand-md fixed-top">
+      <div class="mapSelector">
+        <select
+          id="placeSelector"
+          name="place-choice"
+          onchange="navigateToPage()"
+        >
+          <option id="coffee" value="coffee">Coffee Shops</option>
+          <option id="routes" value="routes">Walking Tours</option>
+        </select>
+        <span>of</span>
+        <select
+          id="citySelector"
+          name="city-choice"
+          onchange="navigateToPage()"
+        >
+          <option id="spokane" value="spokane">Spokane</option>
+          <option id="seattle" value="seattle">Seattle</option>
+        </select>
+      </div>
+    </nav>
+    <section class="px-0 main">
+      <div id="map"></div>
+      <div id="list-container" class="col-sm col-md-4 px-0">
+        <ol>
+          <li>
+            <div
+              id="ladder"
+              class="container"
+              data-lat="47.65668335388477"
+              data-lng="-117.43472818257227"
+              data-place-id="ChIJybu1pPUcnlQRvAktez_Z1pQ"
+            >
+              <div class="info">
+                <h1>Ladder Coffee</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  2823 N Monroe St, Spokane, WA 99205
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - sat 7am - 4pm | sun 8am - 3pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="rockwood"
+              class="container"
+              data-lat="47.63908162355021"
+              data-lng="-117.40543439653601"
+              data-place-id="ChIJ47ohYIEinlQRwSHWRqqAKZ8"
+            >
+              <div class="info">
+                <h1>Rockwood Bakery</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  315 E 18th Ave, Spokane, WA 99203
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - sat 8am-2pm | sun - closed
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/C7Ku6e9zmDZj62i57"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="indaba"
+              class="container"
+              data-lat="47.65809460719062"
+              data-lng="-117.42047022410122"
+              data-place-id="ChIJ5ZVbe5wZnlQRJnnkRmLHzjA"
+            >
+              <div class="info">
+                <h1>Indaba</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  518 W Riverside Ave, Spokane, WA 99201
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 7am - 7pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="atticus"
+              class="container"
+              data-lat="47.659720434715204"
+              data-lng="-117.42090313997879"
+              data-place-id="ChIJyatrcWAYnlQRk4xXzgy8XrY"
+            >
+              <div class="info">
+                <h1>Atticus Coffee & Gifts</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  222 N Howard St, Spokane, WA 99201
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - sat 7:30am-6pm | sun 9am-5pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="overcast"
+              class="container"
+              data-lat="47.6146142"
+              data-lng="-122.3197034"
+              data-place-id="ChIJk6fwHrYinlQRnsGHD-eFHuo"
+            >
+              <div class="info">
+                <h1>Chaps Diner & Bakery</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  4237 Cheney Spokane Rd, Spokane, WA 99224
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  wed - fri 8am - 2pm & 4:30pm - 9pm | sat, sun 8am - 2pm | mon,
+                  tue - closed
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="thomas-hammer"
+              class="container"
+              data-lat="47.62577505888049"
+              data-lng="-117.40148695076327"
+              data-place-id="ChIJMQNcJ_ojnlQRHNO163X6bXc"
+            >
+              <div class="info">
+                <h1>Thomas Hammer Coffee Roasters</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  3173 S Grand Blvd, Spokane, WA 99203S
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon, wed, th 8am-3pm / fri -sun 8am-4pm / tue - closed
+                </div>
+                <div class="item-content">
+                  <p>This is the expandable content.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="miflavour"
+              class="container"
+              data-lat="47.65756299428217"
+              data-lng="-117.36045223373905"
+              data-place-id="ChIJI8TlJYgYnlQRVyhILWG2E3w"
+            >
+              <div class="info">
+                <h1>MiFlavour French Bakery</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  3403 E Sprague Ave, Spokane, WA 99202
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - fri, sun 9am - 6pm | fri - sat 9am-7pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="revival"
+              class="container"
+              data-lat="47.6587251910741"
+              data-lng="-117.41875496723547"
+              data-place-id="ChIJfddrWSMZnlQR5zadD9uQ4Go"
+            >
+              <div class="info">
+                <h1>Revival Tea Company</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  415 W Main Ave Suite 100, Spokane, WA 99201
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 9am - 6pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="first-avenue"
+              class="container"
+              data-lat="47.656248697884294"
+              data-lng="-117.42720912482574"
+            >
+              <div class="info">
+                <h1>First Avenue Coffee</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  1011 W 1st Ave Suite A, Spokane, WA 99201
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 7am - 4pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="made-with-love"
+              class="container"
+              data-lat="47.666009066805266"
+              data-lng="-117.44293200160384"
+              data-place-id="ChIJM8HstAcZnlQRS5DUbyFhXg0"
+            >
+              <div class="info">
+                <h1>Made With Love Bakery</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  2023 W Dean Ave, Spokane, WA 99201
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - closed | tue - sat 7:30am-3pm
+                </div>
+                <div class="item-content">
+                  <p>This is the expandable content.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <a target="_blank" href="https://icons8.com/icon/46932/visit">Visit</a>
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=DEMO&libraries=places&loading=async&callback=initMap"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
