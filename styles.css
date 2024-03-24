@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Reseting Styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Navigation Styles */
+.navbar {
+  position: fixed;
+  padding: 10px;
+  color: #e7ecef;
+  font-size: 30px;
+  background-color: #6096ba;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Main Content Styles */
+section.main {
+  display: flex;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+/* Map and List Styles */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+#map,
+#list-container {
+  display: flex;
+  height: calc(100vh - 60px);
+  flex: 1;
+}
+
+#map-container {
+  overflow: hidden;
+}
+
+#list-container {
+  flex-direction: column;
+  border-left: 1px solid grey;
+  overflow-y: scroll;
+}
+
+#list-container li {
+  border-bottom: 1px solid grey;
+}
+
+.item-content {
+  display: none;
+  padding: 10px;
+}
+
+.container.expanded .item-content {
+  display: block;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0 0 8px 20px;
+}
+
+select {
+  height: 40px;
+  width: 200px;
+  font-size: 30px;
+  color: #e7ecef;
+  background-color: #6096ba;
+  border: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
+#placeSelector {
+  text-align: right;
+  width: 220px;
+}
+
+#citySelector {
+  text-align: left;
+  width: 150px;
+}
+
+#list-container a:hover {
+  text-decoration: none;
+}
+#list-container li:hover {
+  background-color: rgb(238, 231, 231);
+  transition: 500ms;
+}
+
+div.container {
+  padding: 30px 15px;
+}
+
+div.info {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+  vertical-align: bottom;
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.249);
+}
+.info div {
+  padding-bottom: 5px;
+}
+.highlight {
+  background-color: rgb(238, 231, 231);
+}
+.banner {
+  max-width: 90%; /* Limiting the width */
+  text-align: center; /* Centering the text horizontally */
+  white-space: nowrap;
+  position: absolute;
+  border-radius: 5px;
+  border-color: #c21212;
+  border-width: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #ffffff;
+  color: #c21212;
+  font-size: 24px;
+}
+/* Mobile Styles */
+@media (max-width: 767px) {
+  #mainNavbar {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  select {
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+  }
+
+  section.main {
+    flex-direction: columm-reverse;
+  }
+
+  #map {
+    order: -1;
+    height: 400px;
+    flex: none;
+  }
+  #list-container {
+    order: 1;
+    flex: none;
+  }
+  #citySelector {
+    text-align: left;
+    width: 100px;
+  }
+  #placeSelector {
+    width: 150px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+  .banner {
+    white-space: normal;
+    max-width: 100%;
+  }
+}

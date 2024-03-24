@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shops of Seattle</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-visit-16.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <nav id="mainNavbar" class="navbar fixed-top">
+      <div class="mapSelector">
+        <select
+          id="placeSelector"
+          name="place-choice"
+          onchange="navigateToPage()"
+        >
+          <option id="coffee" value="coffee">Coffee Shops</option>
+          <option id="routes" value="routes">Walking Tours</option>
+        </select>
+        <span>of</span>
+        <select
+          id="citySelector"
+          name="city-choice"
+          onchange="navigateToPage()"
+        >
+          <option id="seattle" value="seattle">Seattle</option>
+          <option id="spokane" value="spokane">Spokane</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="px-0 main">
+      <div id="map"></div>
+      <div id="list-container" class="col-md-4 px-0">
+        <ol>
+          <li>
+            <div
+              id="storyville"
+              class="container"
+              data-lat="47.60895"
+              data-lng="-122.3404309"
+              data-place-id="ChIJBR3G8LJqkFQRWD2Wzn0qG3c"
+            >
+              <div class="info">
+                <h1>Storyville</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  94 Pike Street Top floor Suite 34, Seattle, WA 98101
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon, wed, thur 8am - 3pm | fri -sun 8am - 4pm | tue - closed
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/C7Ku6e9zmDZj62i57"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="mrwest"
+              class="container"
+              data-lat="47.662079099890626"
+              data-lng="-122.29822558791071"
+              data-place-id="ChIJTZB2YXgVkFQRsdAyHXoPgZM"
+            >
+              <div class="info">
+                <h1>Mr. West</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  2685 NE Village Ln, Seattle, WA 98105
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 8am - 8pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/cLJZQRzaUyUYxhUE9"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="hagen"
+              class="container"
+              data-lat="47.63825993868566"
+              data-lng="-122.3567783221377"
+              data-place-id="ChIJP0Fh64oVkFQRyY0tlusdnRY"
+            >
+              <div class="info">
+                <h1>Café Hagen Modern Scandinavian Cafe</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  2128 Queen Anne Ave N, Seattle, WA 98109
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 7am - 6pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/dqvjB2MFTrpZvFSq6"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="little-oddfellows"
+              class="container"
+              data-lat="47.614698007812684"
+              data-lng="-122.3196216720361 "
+              data-place-id="ChIJeX8MXMxqkFQRDyxyuRKvJTQ"
+            >
+              <div class="info">
+                <h1>Little Oddfellows</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  1521 10th Ave, Seattle, WA 98122
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 10am - 9pm
+                  <div class="item-content">
+                    <p>
+                      <a href="https://maps.app.goo.gl/uYhd8tu9Bvp5brLQ6"
+                        >Get Directions</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="overcast"
+              class="container"
+              data-lat="47.614611085441865"
+              data-lng="-122.31713415542703"
+              data-place-id="ChIJ6WqLxohrkFQRfyUGQh-AXmc"
+            >
+              <div class="info">
+                <h1>Overcast</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  1517 12th Ave Suite 100, Seattle, WA 98122
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - fri 7am - 6pm | sat - sun 8am - 5pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/FH3zBjhdKzNtByKA8"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="general-purpoise"
+              class="container"
+              data-lat="47.598984814393795"
+              data-lng="-122.33465182216226"
+              data-place-id="ChIJ__9P5KRqkFQRtJhSnzJ7joY"
+            >
+              <div class="info">
+                <h1>General Porpoise</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  401 1st Ave S, Seattle, WA 98104
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon- fri 7am - 3pm | sat - sun 8am - 3pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/f4ye8b3JxKFAdkZq9"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="starbucks-reserve"
+              class="container"
+              data-lat="47.61404389299307"
+              data-lng="-122.32807135477908"
+              data-place-id="ChIJsU30zM1qkFQRbnOm1_LBoG0"
+            >
+              <div class="info">
+                <h1>Starbucks Reserve Roastery</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  1124 Pike St, Seattle, WA 98101
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  every day 7am - 9pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/5Zbati4Gs6KsYgHu6"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="archorhead"
+              class="container"
+              data-lat="47.61092944533223"
+              data-lng="-122.34463415092475"
+              data-place-id="ChIJFROGJBZrkFQRCD-8FMNuBSs"
+            >
+              <div class="info">
+                <h1>Archorhead Coffee</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  1115 12th Ave, Seattle, WA 98122, USA
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - fri 7am - 4pm | sat - sun 8am - 5pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/Y14ufVDcYv7PyfLq9"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="sip-house"
+              class="container"
+              data-lat="47.66510458723199"
+              data-lng="-122.31448716962848"
+              data-place-id="ChIJCUNyPKEVkFQR94JP8mIGtbA"
+            >
+              <div class="info">
+                <h1>Sip House - Seattle Vietnamese Coffee Shop</h1>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >location_on</span
+                  >
+                  5001 Brooklyn Ave NE, Seattle, WA 98105
+                </div>
+                <div>
+                  <span class="material-icons md-18 md-dark md-inactive"
+                    >schedule</span
+                  >
+                  mon - sat 8am-6pm | sun 8am-5pm
+                </div>
+                <div class="item-content">
+                  <p>
+                    <a href="https://maps.app.goo.gl/xhik416mAWuATgX78"
+                      >Get Directions</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=DEMO&loading=async&&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
